@@ -1,0 +1,28 @@
+{
+    "name": "sheer/change_search_type",
+    "type": "phpbb-extension",
+    "description": "Change search type",
+    "homepage": "http://www.phpbbguru.net",
+    "version": "1.0.0",
+    "time": "2015-07-01",
+    "license": "GPL-2.0",
+    "authors": [
+        {
+            "name": "Sheer",
+            "homepage": "http://www.phpbbguru.net",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.3"
+    },
+    "require-dev": {
+      "phpbb/epv": "dev-master"
+    },
+    "extra": {
+        "display-name": "Change search type",
+        "soft-require": {
+            "phpbb/phpbb": "3.1.*@dev"
+        }
+    }
+}
