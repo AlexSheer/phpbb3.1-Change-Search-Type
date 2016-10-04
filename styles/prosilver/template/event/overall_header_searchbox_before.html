@@ -17,13 +17,13 @@ function changeSearchType(btn, cookie) {
 		btn.style.backgroundPosition = '0 -17px';
 		if (!cookie) btn.title = '{L_YANDEX_SEARCH}';
 		s.className = 'search-y';
-		s.innerHTML = '<form id="search-form" action="http://yandex.ru/yandsearch" method="get" target="_blank"><fieldset><input style="margin-top: 4px; border-color: transparent;" type="search" name="text" id="keywords" maxlength="128" placeholder="{L_SEARCH_MINI}" /><input type="hidden" name="site" value="{S_SITE_SEARCHED_NAME}"/></fieldset></form>';
+		s.innerHTML = '<form id="search-form" action="//yandex.ru/yandsearch" method="get" target="_blank"><fieldset><input style="margin-top: 4px; border-color: transparent;" type="search" name="text" id="keywords" maxlength="128" placeholder="{L_SEARCH_MINI}" /><input type="hidden" name="site" value="{S_SITE_SEARCHED_NAME}"/></fieldset></form>';
 	}
 	else if (cookie == 'search-g' || s.className == 'search-y') {
 		btn.style.backgroundPosition = '0 -34px';
 		if (!cookie) btn.title = '{L_GOOGLE_SEARCH}';
 		s.className = 'search-g';
-		s.innerHTML = '<form id="search-form" action="http://www.google.com/search" method="get" target="_blank"><fieldset><input style="margin-top: 4px; border-color: transparent;" type="search" name="q" id="keywords" maxlength="128" placeholder="{L_SEARCH_MINI}" /><input type="hidden" name="domains" value="{S_SITE_SEARCHED_NAME}" /><input type="hidden" name="domains" value="{S_SITE_SEARCHED_NAME}" /><input type="hidden" name="sitesearch" value="{S_SITE_SEARCHED_NAME}" /></fieldset></form>';
+		s.innerHTML = '<form id="search-form" action="//www.google.com/search" method="get" target="_blank"><fieldset><input style="margin-top: 4px; border-color: transparent;" type="search" name="q" id="keywords" maxlength="128" placeholder="{L_SEARCH_MINI}" /><input type="hidden" name="domains" value="{S_SITE_SEARCHED_NAME}" /><input type="hidden" name="domains" value="{S_SITE_SEARCHED_NAME}" /><input type="hidden" name="sitesearch" value="{S_SITE_SEARCHED_NAME}" /></fieldset></form>';
 	}
 	else {
 		btn.style.backgroundPosition = '0 0';
