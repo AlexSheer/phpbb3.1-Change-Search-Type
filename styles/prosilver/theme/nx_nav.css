@@ -1,0 +1,51 @@
+#nx-sh {
+	float: right;
+	line-height: 1.5em;
+	font-size: 12px;
+	font-family: "Segoe UI","Trebuchet MS",Tahoma,Ubuntu,"DejaVu Sans",Helvetica,sans-serif;
+
+}
+
+#nx-search {
+	right: 5px;
+	margin-top: -13px;
+	display: block;
+	position: absolute;
+	top: 50%;
+	border-color: #ccc;
+	border-radius: 4px;
+	padding: 5px;
+}
+
+#nx-usertools #nx-keywords {
+	border: none;
+	width: 102px;
+	background: none;
+	font-size: 11px;
+	vertical-align: baseline;
+	color: #6B6B6B;
+	cursor: text;
+	padding: 2px;
+}
+
+#nx-search-type {
+	height: 17px;
+	width: 17px;
+	background-image: url('./../theme/images/tools.png');
+	cursor: pointer;
+	opacity: 0.6;
+	float: left;
+	margin: 4px 4px 0px 4px;
+}
+#nx-search-type:hover {
+	opacity: 1;
+}
+#nx-search-box {
+	float: left;
+}
+#nx-search-go {
+	height: 17px;
+	width: 17px;
+	cursor: pointer;
+	float: right;
+}
