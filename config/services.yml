@@ -1,0 +1,7 @@
+services:
+    sheer.change_search_type.listener:
+        class: sheer\change_search_type\event\listener
+        arguments:
+            - @template
+        tags:
+            - { name: event.listener }
