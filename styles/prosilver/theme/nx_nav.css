@@ -3,7 +3,6 @@
 	line-height: 1.5em;
 	font-size: 12px;
 	font-family: "Segoe UI","Trebuchet MS",Tahoma,Ubuntu,"DejaVu Sans",Helvetica,sans-serif;
-
 }
 
 #nx-search {
@@ -43,9 +42,11 @@
 #nx-search-box {
 	float: left;
 }
-#nx-search-go {
-	height: 17px;
-	width: 17px;
-	cursor: pointer;
-	float: right;
+.responsive-search {display: none !important}
+#search-box {display: none}
+@media only screen and (max-width: 992px), only screen and (max-device-width: 992px)
+{
+	.search-header {
+		margin: 5px 10px;
+	}
 }
