@@ -2,14 +2,14 @@
     "name": "sheer/change_search_type",
     "type": "phpbb-extension",
     "description": "Change search type",
-    "homepage": "http://www.phpbbguru.net",
-    "version": "1.0.0",
-    "time": "2015-07-01",
+    "homepage": "https://www.phpbbguru.net",
+    "version": "1.0.1",
+    "time": "2017-08-13",
     "license": "GPL-2.0",
     "authors": [
         {
             "name": "Sheer",
-            "homepage": "http://www.phpbbguru.net",
+            "homepage": "https://www.phpbbguru.net",
             "role": "Developer"
         }
     ],
