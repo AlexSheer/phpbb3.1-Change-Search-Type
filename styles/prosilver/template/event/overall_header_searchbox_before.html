@@ -1,6 +1,4 @@
-<style>
-	#search-box {display: none}
-</style>
+
 <script type="text/javascript">
 // <![CDATA[
 function changeSearchType(btn, cookie) {
@@ -17,13 +15,13 @@ function changeSearchType(btn, cookie) {
 		btn.style.backgroundPosition = '0 -17px';
 		if (!cookie) btn.title = '{L_YANDEX_SEARCH}';
 		s.className = 'search-y';
-		s.innerHTML = '<form id="search-form" action="//yandex.ru/yandsearch" method="get" target="_blank"><fieldset><input style="margin-top: 4px; border-color: transparent;" type="search" name="text" id="keywords" maxlength="128" placeholder="{L_SEARCH_MINI}" /><input type="hidden" name="site" value="{S_SITE_SEARCHED_NAME}"/></fieldset></form>';
+		s.innerHTML = '<form id="search-form" action="//yandex.ru/yandsearch" method="get" target="_blank"><fieldset><input class="inputbox search tiny" size="20" value="{SEARCH_WORDS}" type="search" name="text" id="keywords" maxlength="128" placeholder="{L_SEARCH_MINI}" /><input type="hidden" name="site" value="{S_SITE_SEARCHED_NAME}"/></fieldset></form>';
 	}
 	else if (cookie == 'search-g' || s.className == 'search-y') {
 		btn.style.backgroundPosition = '0 -34px';
 		if (!cookie) btn.title = '{L_GOOGLE_SEARCH}';
 		s.className = 'search-g';
-		s.innerHTML = '<form id="search-form" action="//www.google.com/search" method="get" target="_blank"><fieldset><input style="margin-top: 4px; border-color: transparent;" type="search" name="q" id="keywords" maxlength="128" placeholder="{L_SEARCH_MINI}" /><input type="hidden" name="domains" value="{S_SITE_SEARCHED_NAME}" /><input type="hidden" name="domains" value="{S_SITE_SEARCHED_NAME}" /><input type="hidden" name="sitesearch" value="{S_SITE_SEARCHED_NAME}" /></fieldset></form>';
+		s.innerHTML = '<form id="search-form" action="//www.google.com/search" method="get" target="_blank"><fieldset><input class="inputbox search tiny" size="20" value="{SEARCH_WORDS}" type="search" name="q" id="keywords" maxlength="128" placeholder="{L_SEARCH_MINI}" /><input type="hidden" name="domains" value="{S_SITE_SEARCHED_NAME}" /><input type="hidden" name="domains" value="{S_SITE_SEARCHED_NAME}" /><input type="hidden" name="sitesearch" value="{S_SITE_SEARCHED_NAME}" /></fieldset></form>';
 	}
 	else {
 		btn.style.backgroundPosition = '0 0';
@@ -37,18 +35,24 @@ function changeSearchType(btn, cookie) {
 //	Cookie.set('search_type', s.className, {duration: 365, path: '/'});
 }
 </script>
-			<!-- IF S_CHANGE_SEARCH_TYPE -->
+
 				<div id="search-box" class="search-box search-header" role="search" style="background: #fff; display:block">
 					<div id="nx-search-type" onclick="changeSearchType(this, false)" title="{L_SEARCH_TYPE_SELECT}"></div>
 					<div id="nx-search-box" class="search-s">
 						<form id="search-form" action="{U_SEARCH}" method="get">
-						<fieldset>
-							<input style="margin-top: 4px; border-color: transparent;" name="keywords" id="keywords" maxlength="128" type="search" title="{L_SEARCH_KEYWORDS}" placeholder="{L_SEARCH_MINI}"/>
-						</fieldset>
+							<fieldset>
+								<input name="keywords" id="keywords" type="search" maxlength="128" title="{L_SEARCH_KEYWORDS}" class="inputbox search tiny" size="20" value="{SEARCH_WORDS}" placeholder="{L_SEARCH_MINI}" />
+							</fieldset>
 						</form>
 					</div>
+					<!-- IF PHPBB_VERSION_CHK >= 2 -->
+					<div class="button button-search" id="nx-search-go" title="{L_SEARCH}" onclick="document.forms['search-form'].submit()"><i class="icon fa-search fa-fw" aria-hidden="true"></i><span class="sr-only">{L_SEARCH}</span></div>
+					<a href="{U_SEARCH}" class="button button-search-end" title="{L_SEARCH_ADV}">
+						<i class="icon fa-cog fa-fw" aria-hidden="true"></i><span class="sr-only">{L_SEARCH_ADV}</span>
+					</a>
+					<!-- ELSE -->
 					<div class="button icon-button search-icon" style="border: medium none; border-radius: 4px; height: 20px; margin-right: 0px; margin-bottom: 0px;" id="nx-search-go" title="{L_SEARCH}" onclick="document.forms['search-form'].submit()"></div>
 					<a style="border-radius: 4px;" href="{U_SEARCH}" class="button icon-button search-adv-icon" title="{L_SEARCH_ADV}">{L_SEARCH_ADV}</a>
+					<!-- ENDIF -->
 					{S_SEARCH_HIDDEN_FIELDS}
 				</div>
-			<!-- ENDIF -->
