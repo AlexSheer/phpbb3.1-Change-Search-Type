@@ -45,9 +45,11 @@ class listener implements EventSubscriberInterface
 	{
 		$pattern = array('http://', 'https://');
 		$replacement = array('', '');
+		$version = explode('.', PHPBB_VERSION);
+
 		$this->template->assign_vars(array(
-			'S_CHANGE_SEARCH_TYPE'			=> true,
 			'S_SITE_SEARCHED_NAME'			=> str_replace($pattern, $replacement, generate_board_url()),
+			'PHPBB_VERSION_CHK'				=> $version[1],
 		));
 	}
 
